@@ -1,0 +1,780 @@
+---------------------------------------------------------------
+[ 2019-04-09T10:04:43+08:00 ] 0.0.0.0 GET www.frame.com:8888/admin/index/index.html
+[运行时间：0.124615s] [吞吐率：8.02req/s] [内存消耗：2,576.53kb] [文件加载：49]
+[ info ] [ LANG ] /Users/xinjiashuodemac/workspace/my/frame/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.frame.com:8888',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.frame.com:8888/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=1sancef27v55e9s1j0tdr6h01r',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->Index[ /Users/xinjiashuodemac/workspace/my/frame/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/xinjiashuodemac/workspace/my/frame/public/../application/admin/view/index/index.html [ array (
+  0 => 'adminmenu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002563s ] mysql:host=localhost;dbname=frame;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xin_menu` [ RunTime:0.011112s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_status` = 1  AND `menu_parent` = 0 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.002646s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 1  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 5  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 7  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 10  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 13  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 17  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000442s ]
+---------------------------------------------------------------
+[ 2019-04-09T10:04:43+08:00 ] 0.0.0.0 GET www.frame.com:8888/admin/index/welcome.html
+[运行时间：0.030017s] [吞吐率：33.31req/s] [内存消耗：1,641.57kb] [文件加载：40]
+[ info ] [ LANG ] /Users/xinjiashuodemac/workspace/my/frame/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.frame.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.frame.com:8888/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=1sancef27v55e9s1j0tdr6h01r',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->Welcome[ /Users/xinjiashuodemac/workspace/my/frame/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /Users/xinjiashuodemac/workspace/my/frame/public/../application/admin/view/index/welcome.html [ array (
+  0 => 'Greetings',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-09T10:05:01+08:00 ] 0.0.0.0 GET www.frame.com:8888/admin/index/index.html
+[运行时间：0.043047s] [吞吐率：23.23req/s] [内存消耗：2,576.55kb] [文件加载：49]
+[ info ] [ LANG ] /Users/xinjiashuodemac/workspace/my/frame/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.frame.com:8888',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.frame.com:8888/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=1sancef27v55e9s1j0tdr6h01r',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->Index[ /Users/xinjiashuodemac/workspace/my/frame/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/xinjiashuodemac/workspace/my/frame/public/../application/admin/view/index/index.html [ array (
+  0 => 'adminmenu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000427s ] mysql:host=localhost;dbname=frame;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xin_menu` [ RunTime:0.000667s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_status` = 1  AND `menu_parent` = 0 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 1  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000302s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 5  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 7  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 10  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 13  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 17  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000281s ]
+---------------------------------------------------------------
+[ 2019-04-09T10:05:01+08:00 ] 0.0.0.0 GET www.frame.com:8888/admin/index/welcome.html
+[运行时间：0.029629s] [吞吐率：33.75req/s] [内存消耗：1,641.57kb] [文件加载：40]
+[ info ] [ LANG ] /Users/xinjiashuodemac/workspace/my/frame/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.frame.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.frame.com:8888/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=1sancef27v55e9s1j0tdr6h01r',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->Welcome[ /Users/xinjiashuodemac/workspace/my/frame/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /Users/xinjiashuodemac/workspace/my/frame/public/../application/admin/view/index/welcome.html [ array (
+  0 => 'Greetings',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-09T10:05:02+08:00 ] 0.0.0.0 GET www.frame.com:8888/admin/index/index.html
+[运行时间：0.040715s] [吞吐率：24.56req/s] [内存消耗：2,576.55kb] [文件加载：49]
+[ info ] [ LANG ] /Users/xinjiashuodemac/workspace/my/frame/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.frame.com:8888',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.frame.com:8888/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=1sancef27v55e9s1j0tdr6h01r',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->Index[ /Users/xinjiashuodemac/workspace/my/frame/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/xinjiashuodemac/workspace/my/frame/public/../application/admin/view/index/index.html [ array (
+  0 => 'adminmenu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000296s ] mysql:host=localhost;dbname=frame;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xin_menu` [ RunTime:0.000557s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_status` = 1  AND `menu_parent` = 0 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 1  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000299s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 5  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000278s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 7  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000267s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 10  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000267s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 13  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000269s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 17  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000329s ]
+---------------------------------------------------------------
+[ 2019-04-09T10:05:02+08:00 ] 0.0.0.0 GET www.frame.com:8888/admin/index/welcome.html
+[运行时间：0.026362s] [吞吐率：37.93req/s] [内存消耗：1,641.57kb] [文件加载：40]
+[ info ] [ LANG ] /Users/xinjiashuodemac/workspace/my/frame/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.frame.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.frame.com:8888/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=1sancef27v55e9s1j0tdr6h01r',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->Welcome[ /Users/xinjiashuodemac/workspace/my/frame/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /Users/xinjiashuodemac/workspace/my/frame/public/../application/admin/view/index/welcome.html [ array (
+  0 => 'Greetings',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-09T10:05:03+08:00 ] 0.0.0.0 GET www.frame.com:8888/admin/index/index.html
+[运行时间：0.042134s] [吞吐率：23.73req/s] [内存消耗：2,576.55kb] [文件加载：49]
+[ info ] [ LANG ] /Users/xinjiashuodemac/workspace/my/frame/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.frame.com:8888',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.frame.com:8888/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=1sancef27v55e9s1j0tdr6h01r',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->Index[ /Users/xinjiashuodemac/workspace/my/frame/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/xinjiashuodemac/workspace/my/frame/public/../application/admin/view/index/index.html [ array (
+  0 => 'adminmenu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000394s ] mysql:host=localhost;dbname=frame;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xin_menu` [ RunTime:0.000579s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_status` = 1  AND `menu_parent` = 0 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 1  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 5  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000304s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 7  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 10  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000289s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 13  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000303s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 17  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000294s ]
+---------------------------------------------------------------
+[ 2019-04-09T10:05:03+08:00 ] 0.0.0.0 GET www.frame.com:8888/admin/index/welcome.html
+[运行时间：0.027106s] [吞吐率：36.89req/s] [内存消耗：1,641.57kb] [文件加载：40]
+[ info ] [ LANG ] /Users/xinjiashuodemac/workspace/my/frame/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.frame.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.frame.com:8888/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=1sancef27v55e9s1j0tdr6h01r',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->Welcome[ /Users/xinjiashuodemac/workspace/my/frame/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /Users/xinjiashuodemac/workspace/my/frame/public/../application/admin/view/index/welcome.html [ array (
+  0 => 'Greetings',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-09T10:24:10+08:00 ] 0.0.0.0 GET www.frame.com:8888/admin/index/index.html
+[运行时间：0.048456s] [吞吐率：20.64req/s] [内存消耗：2,576.55kb] [文件加载：49]
+[ info ] [ LANG ] /Users/xinjiashuodemac/workspace/my/frame/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.frame.com:8888',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.frame.com:8888/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=1sancef27v55e9s1j0tdr6h01r',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->Index[ /Users/xinjiashuodemac/workspace/my/frame/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/xinjiashuodemac/workspace/my/frame/public/../application/admin/view/index/index.html [ array (
+  0 => 'adminmenu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000344s ] mysql:host=localhost;dbname=frame;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xin_menu` [ RunTime:0.000722s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_status` = 1  AND `menu_parent` = 0 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 1  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 5  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 7  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 10  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 13  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000302s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 17  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000292s ]
+---------------------------------------------------------------
+[ 2019-04-09T10:24:10+08:00 ] 0.0.0.0 GET www.frame.com:8888/admin/index/welcome.html
+[运行时间：0.028003s] [吞吐率：35.71req/s] [内存消耗：1,641.57kb] [文件加载：40]
+[ info ] [ LANG ] /Users/xinjiashuodemac/workspace/my/frame/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.frame.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.frame.com:8888/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=1sancef27v55e9s1j0tdr6h01r',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->Welcome[ /Users/xinjiashuodemac/workspace/my/frame/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /Users/xinjiashuodemac/workspace/my/frame/public/../application/admin/view/index/welcome.html [ array (
+  0 => 'Greetings',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-09T14:07:32+08:00 ] 0.0.0.0 GET www.frame.com:8888/admin/index/index.html
+[运行时间：0.046972s] [吞吐率：21.29req/s] [内存消耗：2,576.55kb] [文件加载：49]
+[ info ] [ LANG ] /Users/xinjiashuodemac/workspace/my/frame/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.frame.com:8888',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.frame.com:8888/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=1sancef27v55e9s1j0tdr6h01r',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->Index[ /Users/xinjiashuodemac/workspace/my/frame/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/xinjiashuodemac/workspace/my/frame/public/../application/admin/view/index/index.html [ array (
+  0 => 'adminmenu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000258s ] mysql:host=localhost;dbname=frame;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xin_menu` [ RunTime:0.001022s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_status` = 1  AND `menu_parent` = 0 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 1  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000254s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 5  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 7  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 10  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 13  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000199s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 17  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000193s ]
+---------------------------------------------------------------
+[ 2019-04-09T14:07:32+08:00 ] 0.0.0.0 GET www.frame.com:8888/admin/index/welcome.html
+[运行时间：0.051363s] [吞吐率：19.47req/s] [内存消耗：1,641.57kb] [文件加载：40]
+[ info ] [ LANG ] /Users/xinjiashuodemac/workspace/my/frame/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.frame.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.frame.com:8888/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=1sancef27v55e9s1j0tdr6h01r',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->Welcome[ /Users/xinjiashuodemac/workspace/my/frame/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /Users/xinjiashuodemac/workspace/my/frame/public/../application/admin/view/index/welcome.html [ array (
+  0 => 'Greetings',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-09T14:07:32+08:00 ] 0.0.0.0 GET www.frame.com:8888/admin/index/index.html
+[运行时间：0.045139s] [吞吐率：22.15req/s] [内存消耗：2,576.55kb] [文件加载：49]
+[ info ] [ LANG ] /Users/xinjiashuodemac/workspace/my/frame/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.frame.com:8888',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.frame.com:8888/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=1sancef27v55e9s1j0tdr6h01r',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->Index[ /Users/xinjiashuodemac/workspace/my/frame/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/xinjiashuodemac/workspace/my/frame/public/../application/admin/view/index/index.html [ array (
+  0 => 'adminmenu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000278s ] mysql:host=localhost;dbname=frame;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xin_menu` [ RunTime:0.000608s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_status` = 1  AND `menu_parent` = 0 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 1  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 5  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 7  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 10  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 13  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000279s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 17  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000280s ]
+---------------------------------------------------------------
+[ 2019-04-09T14:07:32+08:00 ] 0.0.0.0 GET www.frame.com:8888/admin/index/welcome.html
+[运行时间：0.026279s] [吞吐率：38.05req/s] [内存消耗：1,641.57kb] [文件加载：40]
+[ info ] [ LANG ] /Users/xinjiashuodemac/workspace/my/frame/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.frame.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.frame.com:8888/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=1sancef27v55e9s1j0tdr6h01r',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->Welcome[ /Users/xinjiashuodemac/workspace/my/frame/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /Users/xinjiashuodemac/workspace/my/frame/public/../application/admin/view/index/welcome.html [ array (
+  0 => 'Greetings',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-09T14:09:04+08:00 ] 0.0.0.0 GET www.frame.com:8888/admin/index/index.html
+[运行时间：0.044731s] [吞吐率：22.36req/s] [内存消耗：2,576.55kb] [文件加载：49]
+[ info ] [ LANG ] /Users/xinjiashuodemac/workspace/my/frame/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.frame.com:8888',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.frame.com:8888/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=1sancef27v55e9s1j0tdr6h01r',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->Index[ /Users/xinjiashuodemac/workspace/my/frame/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/xinjiashuodemac/workspace/my/frame/public/../application/admin/view/index/index.html [ array (
+  0 => 'adminmenu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000411s ] mysql:host=localhost;dbname=frame;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xin_menu` [ RunTime:0.000751s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_status` = 1  AND `menu_parent` = 0 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000460s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 1  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 5  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 7  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 10  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 13  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 17  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000344s ]
+---------------------------------------------------------------
+[ 2019-04-09T14:09:04+08:00 ] 0.0.0.0 GET www.frame.com:8888/admin/index/welcome.html
+[运行时间：0.029004s] [吞吐率：34.48req/s] [内存消耗：1,641.57kb] [文件加载：40]
+[ info ] [ LANG ] /Users/xinjiashuodemac/workspace/my/frame/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.frame.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.frame.com:8888/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=1sancef27v55e9s1j0tdr6h01r',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->Welcome[ /Users/xinjiashuodemac/workspace/my/frame/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /Users/xinjiashuodemac/workspace/my/frame/public/../application/admin/view/index/welcome.html [ array (
+  0 => 'Greetings',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-09T14:09:48+08:00 ] 0.0.0.0 GET www.frame.com:8888/admin/index/index.html
+[运行时间：0.040625s] [吞吐率：24.62req/s] [内存消耗：2,573.09kb] [文件加载：49]
+[ info ] [ LANG ] /Users/xinjiashuodemac/workspace/my/frame/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.frame.com:8888',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.frame.com:8888/admin/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=1sancef27v55e9s1j0tdr6h01r',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->Index[ /Users/xinjiashuodemac/workspace/my/frame/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/xinjiashuodemac/workspace/my/frame/public/../application/admin/view/index/index.html [ array (
+  0 => 'adminmenu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000367s ] mysql:host=localhost;dbname=frame;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xin_menu` [ RunTime:0.000701s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_status` = 1  AND `menu_parent` = 0 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 1  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 5  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SELECT * FROM `xin_menu` WHERE  `menu_parent` = 17  AND `menu_status` = 1 ORDER BY `menu_rank` DESC LIMIT 0,100 [ RunTime:0.000285s ]
+---------------------------------------------------------------
+[ 2019-04-09T14:09:48+08:00 ] 0.0.0.0 GET www.frame.com:8888/admin/index/welcome.html
+[运行时间：0.028654s] [吞吐率：34.90req/s] [内存消耗：1,641.57kb] [文件加载：40]
+[ info ] [ LANG ] /Users/xinjiashuodemac/workspace/my/frame/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.frame.com:8888',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.frame.com:8888/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=1sancef27v55e9s1j0tdr6h01r',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->Welcome[ /Users/xinjiashuodemac/workspace/my/frame/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /Users/xinjiashuodemac/workspace/my/frame/public/../application/admin/view/index/welcome.html [ array (
+  0 => 'Greetings',
+) ]
+[ info ] [ LOG ] INIT File
