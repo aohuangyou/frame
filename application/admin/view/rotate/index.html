@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>轮播图列表</title>
+        <title>{$modeltext}列表</title>
         <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -39,22 +39,27 @@
         <div class="layui-row layui-col-space15">
             <div class="layui-col-md12">
                 <div class="layui-card">
-                    <div class="layui-card-header">轮播图列表</div>
+                    <div class="layui-card-header">{$modeltext}列表</div>
                     <div class="layui-card-body">
                         <table class="layui-hide" id="test-table-form" lay-filter="test-table-form"></table>
 
                         <script type="text/html" id="test-table-toolbar-toolbarDemo">
                             <div class="layui-btn-container">
-                                <button class="layui-btn layui-btn-sm" id="create">添加轮播图</button>
+                                <button class="layui-btn layui-btn-sm" id="create">添加{$modeltext}</button>
                             </div>
                         </script>
 
-                        <script type="text/html" id="test-table-switchTpl">
-                            <input type="checkbox" name="rotate_status" lay-skin="switch" lay-text="正常|禁用" lay-filter="test-table-sexDemo"
-                            value="{{ d.rotate_id }}" {{ d.rotate_status == 1 ? 'disabled' : '' }} data-json="{{ encodeURIComponent(JSON.stringify(d)) }}" {{ d.rotate_status == 1 ? 'checked' : '' }}>
+                        <script type="text/html" id="StatusTpl">
+                            <input type="checkbox" lay-skin="switch" lay-text="正常|禁用" lay-filter="changeStatus" data-json="{{ encodeURIComponent(JSON.stringify(d)) }}" {{ d.rotate_status == 1 ? 'checked' : '' }}>
                         </script>
 
-                        <script type="text/html" id="test-table-operate-barDemo">
+ <!--                   禁用切换
+                        <script type="text/html" id="StatusTpl">
+                            <input type="checkbox" lay-skin="switch" lay-text="正常|禁用" lay-filter="changeStatus"
+                            value="{{ d.rotate_id }}" disabled data-json="{{ encodeURIComponent(JSON.stringify(d)) }}" {{ d.rotate_status == 1 ? 'checked' : '' }}>
+                        </script> -->
+
+                        <script type="text/html" id="operating">
                             <a class="layui-btn layui-btn-xs" lay-event="update">编辑</a>
                             <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
                         </script>
@@ -90,46 +95,46 @@
                         ,{field:'rotate_desc', title:'轮播图描述'}
                         ,{field:'rotate_href', title:'跳转链接'}
                         ,{field:'rotate_rank', title:'轮播图权重', minWidth:80, sort: true}
-                        ,{field:'rotate_status', title:'轮播图状态', width:120, templet: '#test-table-switchTpl', unresize: true}
+                        ,{field:'rotate_status', title:'轮播图状态', width:120, templet: '#StatusTpl', unresize: true}
                         ,{field:'rotate_time', title:'创建时间', minWidth:80, sort: true}
-                        ,{title:'操作', width:178, align:'center', fixed: 'right', toolbar: '#test-table-operate-barDemo'}
+                        ,{title:'操作', width:178, align:'center', fixed: 'right', toolbar: '#operating'}
                     ]]
                 ,page: true
             });
         
-            //监听性别操作
-            form.on('switch(test-table-sexDemo)', function(obj){
+            //修改数据状态
+            form.on('switch(changeStatus)', function(obj){
 
                 var json = JSON.parse(decodeURIComponent($(this).data('json')));
 
-                if(json.order_result == 0){
-                    layer.confirm('确认该订单已成功？此操作不可撤销！', {
-                        btn: ['确定','取消']
-                    }, function(){
-                        $.ajax({
-                            url:"{:url('changeOrder')}",
-                            type:"POST",
-                            data:{rotate_id:json.rotate_id},
-                            success:function(res){
-                                layer.msg(res.msg);
-                                if(res.code)
-                                    setTimeout(function(){window.location.reload()},2000);
-                            },error:function(){
-                                layer.msg('服务器错误，请稍后重试！');
-                            }
-                        })
-                    }, function(){
-                        window.location.reload();
-                    });
-                }else
-                    layer.msg('该订单已完成，不可撤销');
+                console.log(json);
+
+
+                layer.confirm("确认修改{$modeltext}状态？", {
+                    btn: ['确定','取消']
+                }, function(){
+                    $.ajax({
+                        url:"{:url('change')}",
+                        type:"POST",
+                        data:{id:json.rotate_id},
+                        success:function(res){
+                            layer.msg(res.msg);
+                            if(res.code)
+                                setTimeout(function(){window.location.reload()},2000);
+                        },error:function(){
+                            layer.msg('服务器错误，请稍后重试！');
+                        }
+                    })
+                }, function(){
+                    window.location.reload();
+                });
             });
 
 
             $("#create").click(function(){
                 layer.open({
                     type: 2
-                    ,title:'添加轮播图'
+                    ,title:"添加{$modeltext}"
                     ,content: "{:url('create')}"
                     ,shadeClose: true
                     ,area: ['70%', '71%']
@@ -144,36 +149,32 @@
             //监听工具条
             table.on('tool(test-table-form)', function(obj){
 
-                if(obj.data.member_group == 1)
-                    layer.msg('超级管理员不允许修改或删除');
-                else{
-                    var dataid = obj.data.rotate_id;
-                    if(obj.event === 'update'){
-                        var url = "{:url('update','',false)}/id/" + dataid;
-                        layer.open({
-                            type: 2
-                            ,title:'编辑轮播图'
-                            ,content: url
-                            ,shadeClose: true
-                            ,area: ['70%', '80%']
-                            ,maxmin: true
-                        });
-                    } else if(obj.event === 'del'){
-                        var url = "{:url('delete','',false)}/id/" + dataid;
-                        layer.confirm('您确定要删除该轮播图吗？', function(index){
-                            $.ajax({
-                                url:url,
-                                success:function(res){
-                                    layer.msg(res.msg);
-                                    if(res.code)
-                                        setTimeout(function(){window.location.reload()},2000);
-                                },error:function(){
-                                    layer.msg('服务器错误，请稍后重试！');
-                                }
-                            })
-                            layer.close(index);
-                        });
-                    }
+                var dataid = obj.data.rotate_id;
+                if(obj.event === 'update'){
+                    var url = "{:url('update','',false)}/id/" + dataid;
+                    layer.open({
+                        type: 2
+                        ,title:"编辑{$modeltext}"
+                        ,content: url
+                        ,shadeClose: true
+                        ,area: ['70%', '80%']
+                        ,maxmin: true
+                    });
+                } else if(obj.event === 'del'){
+                    var url = "{:url('delete','',false)}/id/" + dataid;
+                    layer.confirm("您确定要删除该{$modeltext}吗？", function(index){
+                        $.ajax({
+                            url:url,
+                            success:function(res){
+                                layer.msg(res.msg);
+                                if(res.code)
+                                    setTimeout(function(){window.location.reload()},2000);
+                            },error:function(){
+                                layer.msg('服务器错误，请稍后重试！');
+                            }
+                        })
+                        layer.close(index);
+                    });
                 }
             });
 
@@ -199,9 +200,9 @@
                             ,{field:'rotate_desc', title:'轮播图描述'}
                             ,{field:'rotate_href', title:'跳转链接'}
                             ,{field:'rotate_rank', title:'轮播图权重', minWidth:80, sort: true}
-                            ,{field:'rotate_status', title:'轮播图状态', width:120, templet: '#test-table-switchTpl', unresize: true}
+                            ,{field:'rotate_status', title:'轮播图状态', width:120, templet: '#StatusTpl', unresize: true}
                             ,{field:'rotate_time', title:'创建时间', minWidth:80, sort: true}
-                            ,{width:178, align:'center', fixed: 'right', toolbar: '#test-table-operate-barDemo'}
+                            ,{width:178, align:'center', fixed: 'right', toolbar: '#operating'}
                         ]]
                     ,page: true
                     , done: function (res, curr, count) {}

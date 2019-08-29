@@ -3,12 +3,24 @@ namespace app\admin\model;
 use think\Model;
 use think\Validate;
 /*
- * 会员登陆表数据模型
+ * 轮播图表数据模型
  **/
 class Rotate extends Model
 {
+    //声明主键
+    protected $pk = 'rotate_id';
+    //自动写入时间戳
     protected $autoWriteTimestamp = true;
+    //声明添加时间字段
     protected $createTime = 'rotate_time';
+    //声明修改时间字段
+    protected $updateTime = 'rotate_time';
+    //关闭自动写入
+    //protected $updateTime = false;
+    //声明表名
+    //protected $table = 'rotate';
+    //声明只读字段 该字段写入后不可被修改
+    //protected $readonly = ['name','email'];
     protected $rule = [
         'rotate_img|轮播图图片'       => 'require',
     ];
@@ -19,13 +31,13 @@ class Rotate extends Model
      * @param int   $page    第几页
      * @param int   $limit   每页的条数
      **/
-    public function GetListByPage($where=array(), $page=1, $limit=10, $order='rotate_rank desc')
+    public function GetListByPage($where=array(), $page=1, $limit=10, $order="rotate_rank desc")
     {   
         return $this->where($where)->page($page,$limit)->order($order)->select();
     }
 
     //获取数据列表，不分页
-    public function GetDataList($where=array(), $order='rotate_rank desc')
+    public function GetDataList($where=array(), $order="rotate_rank desc")
     {
         return $this->where($where)->order($order)->select();
     }
@@ -45,7 +57,17 @@ class Rotate extends Model
      **/
     public function GetOneDataById($id=0)
     {
-        return $this->where('rotate_id',$id)->find();
+        return $this->where($this->pk,$id)->find();
+    }
+
+    /**
+     * 获取一列数据
+     * @param array  $param 获取条件
+     * @param string $field 字段名
+     **/
+    public function GetColumn($param,$field)
+    {
+        return $this->where($param)->column($field);
     }
 
     /**
@@ -80,7 +102,9 @@ class Rotate extends Model
 
         $res = $this->allowField(true)->save($param);
 
-        return $res === false ? array('code'=>0,'msg'=>$this->getError()) : array('code'=>1,'msg'=>'添加成功');
+        $id = $this->getLastInsID();
+
+        return $res === false ? array('code'=>0,'msg'=>$this->getError()) : array('code'=>1,'msg'=>'添加成功','id'=>$id);
     }
 
     /**
@@ -90,7 +114,33 @@ class Rotate extends Model
     public function UpdateData($param)
     {
         
-        $res = $this->allowField(true)->save($param, ['rotate_id' => $param['rotate_id']]);
+        $res = $this->allowField(true)->save($param, [$this->pk => $param[$this->pk]]);
+
+        return $res === false ? array('code'=>0,'msg'=>$this->getError()) : array('code'=>1,'msg'=>'修改成功');
+    }
+
+    /**
+     * 字段自增
+     * @param array  $param   更新条件
+     * @param string $field   自增字段
+     * @param int    $number  更新数量
+     **/
+    public function DataSetInc($param,$field,$number=1)
+    {
+        $res = $this->where($param)->setInc($field,$number);
+
+        return $res === false ? array('code'=>0,'msg'=>$this->getError()) : array('code'=>1,'msg'=>'修改成功');
+    }
+
+    /**
+     * 字段自减
+     * @param array  $param   更新条件
+     * @param string $field   自减字段
+     * @param int    $number  自减数量
+     **/
+    public function DataSetDec($param,$field,$number=1)
+    {
+        $res = $this->where($param)->setDec($field,$number);
 
         return $res === false ? array('code'=>0,'msg'=>$this->getError()) : array('code'=>1,'msg'=>'修改成功');
     }
@@ -101,6 +151,6 @@ class Rotate extends Model
      **/
     public function DeleteData($id)
     {
-        return $this->where('rotate_id',$id)->delete() ? array('code'=>1,'msg'=>'删除成功') : array('code'=>0,'msg'=>'删除失败');
+        return $this->where($this->pk,$id)->delete() ? array('code'=>1,'msg'=>'删除成功') : array('code'=>0,'msg'=>'删除失败');
     }
 }
